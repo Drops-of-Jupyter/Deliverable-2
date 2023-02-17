@@ -6,10 +6,10 @@ output:
     df_print: paged
 ---
 Loading in data and identifying the data types
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE}
 
 location ='https://github.com/Drops-of-Jupyter/Deliverable-2/raw/main/'
-file ='index.csv'
+file ='finaldata.csv'
 datalink = paste0(location,file)
 
 deliv2data = read.csv(datalink)
@@ -228,7 +228,7 @@ ggarrange(agnPlot,
 ```
 
 Creating dendograms of both agnes and diana measurements
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE}
 fviz_dend(res.agnes,
           k=NumberOfClusterDesired, 
           cex = 0.45, 
